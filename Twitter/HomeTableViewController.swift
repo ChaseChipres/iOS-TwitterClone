@@ -18,13 +18,17 @@ class HomeTableViewController: UITableViewController {
         loadTweet()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        loadTweet()
+    }
+    
     func loadTweet() {
         let myUrl = "https://api.twitter.com/1.1/statuses/home_timeline.json"
         let myParams = ["count": 10]
         
         TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams, success:
             { (tweets: [NSDictionary]) in
-                
+                print(tweets)
                 self.tweetArr.removeAll()
                 
                 for tweet in tweets {

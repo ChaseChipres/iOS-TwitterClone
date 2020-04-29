@@ -29,7 +29,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onLoginButton:" destination="XFq-2N-1pw" eventType="touchUpInside" id="8nK-wJ-HHN"/>
-                                    <segue destination="vf8-gL-LJw" kind="presentation" identifier="loginToHome" modalPresentationStyle="fullScreen" id="Emk-Qa-kBm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,6 +39,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="86l-Bz-Xuf"/>
                     </view>
+                    <connections>
+                        <segue destination="vf8-gL-LJw" kind="presentation" identifier="loginToHome" modalPresentationStyle="fullScreen" id="DJw-rS-ZHg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJz-6f-bDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
